@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addRoomFID" prefHeight="720.0" prefWidth="607.0" style="-fx-background-color: #fff;" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateRoomController">
+   <children>
+      <Pane layoutX="19.0" layoutY="51.0" prefHeight="639.0" prefWidth="571.0" style="-fx-border-width: 5; -fx-border-color: #9c01a4;">
+         <children>
+            <Label alignment="CENTER" layoutX="147.0" layoutY="-28.0" prefHeight="57.0" prefWidth="258.0" style="-fx-background-color: #9c01a4;" text="Rooms" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox layoutX="35.0" layoutY="100.0" prefHeight="556.0" prefWidth="534.0" spacing="30.0">
+         <children>
+            <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtRoomId" layoutX="13.0" layoutY="8.0" onAction="#roomIdOnAction" prefHeight="28.0" prefWidth="500.0" promptText="R001" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Room ID" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtRoomType" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="500.0" promptText="Normal" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Room Type" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtRoomCapacity" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="500.0" promptText="Single" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Room Capacity" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtRoomPrice" layoutX="13.0" layoutY="8.0" prefHeight="28.0" prefWidth="500.0" promptText="1000.00" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Room Price" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="152.0" prefWidth="534.0" spacing="30.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#clearRoomOnAction" prefHeight="52.0" prefWidth="240.0" style="-fx-background-color: #ee0000; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text="   Clear" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="24" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnSave" buttonType="RAISED" onAction="#updateRoomOnAction" prefHeight="52.0" prefWidth="240.0" style="-fx-background-color: #0fb800; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text="   Save" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="23" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

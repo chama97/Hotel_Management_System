@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="dashboardFID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <HBox prefHeight="90.0" prefWidth="1209.0" style="-fx-background-color: #370046;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="62.0" prefWidth="340.0" text=" Royal Hotel" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="47.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BANK" size="40" />
+                     </graphic>
+                  </Label>
+                  <Separator prefHeight="17.0" prefWidth="1073.0">
+                     <HBox.margin>
+                        <Insets top="45.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <JFXButton onAction="#logOutOnAction" style="-fx-background-color: #ff000c; -fx-border-color: #fff; -fx-border-width: 2;" text="LOGOUT" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="25" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <StackPane fx:id="dashboard2FID" prefHeight="810.0" prefWidth="1600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <GridPane hgap="20.0" layoutX="89.0" layoutY="197.0" prefHeight="533.0" prefWidth="1032.0" vgap="20.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#reportOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Reports" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="BAR_CHART" size="35" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#EmployeeOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Employee" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#68007f" glyphName="ACCOUNT_MULTIPLE" size="45" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#vehicleOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Vehicles" GridPane.rowIndex="2">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="TAXI" size="35" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#mealsOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Meals" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="CUTLERY" size="35" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#RoomsOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Rooms" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="BED" size="35" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#CustomerOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Customers" GridPane.rowIndex="1">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="USERS" size="35" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#reservedOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Reserve Details" GridPane.columnIndex="2">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="LIST_ALT" size="35" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#checkOutOnAction" prefHeight="235.0" prefWidth="503.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Check-Out" GridPane.columnIndex="1">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="CALENDAR_TIMES_ALT" size="35" />
+                                       </graphic>
+                                    </Button>
+                                    <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#checkInOnAction" prefHeight="309.0" prefWidth="538.0" style="-fx-border-color: #68007f; -fx-border-width: 2;" text="Check-In">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#68007f" glyphName="CALENDAR_CHECK_ALT" size="35" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="41.0" prefHeight="81.0" prefWidth="1113.0" style="-fx-border-width: 3; -fx-border-color: #68007f; -fx-background-color: #68007f;" text="Dashboard" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="42.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                     <left>
+                        <VBox prefHeight="730.0" prefWidth="392.0" style="-fx-background-color: #4f005d;" BorderPane.alignment="CENTER">
+                           <children>
+                              <GridPane prefHeight="118.0" prefWidth="314.0" style="-fx-border-width: 2; -fx-border-color: #fff; -fx-background-color: #8600a7;">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="122.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="178.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="172.0" text="   Name  :" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblRole" prefHeight="40.0" prefWidth="172.0" text="Administrator" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblUserName" prefHeight="40.0" prefWidth="172.0" text="chamath" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="40.0" prefWidth="172.0" text="   Role    :" textFill="WHITE" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="60.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                              <HBox prefHeight="220.0" prefWidth="352.0" style="-fx-border-color: #fff; -fx-border-width: 2; -fx-background-color: #8600a7;">
+                                 <children>
+                                    <Label text="Available &#10;  Rooms" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="60.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ProgressIndicator fx:id="roomAvailability" prefHeight="164.0" prefWidth="196.0" progress="0.66">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </ProgressIndicator>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="55.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="218.0" prefWidth="352.0" style="-fx-border-color: #fff; -fx-border-width: 2; -fx-background-color: #8600a7;">
+                                 <children>
+                                    <Label text="Reserved &#10;  Rooms&#10;&#10;  &#10;" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="70.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ProgressIndicator fx:id="reservedRoom" prefHeight="149.0" prefWidth="202.0" progress="0.34">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </ProgressIndicator>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" top="60.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </VBox>
+                     </left>
+                  </BorderPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addEmployeeFID" prefHeight="820.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddEmployeeFormController">
+   <children>
+      <Pane layoutX="19.0" layoutY="51.0" prefHeight="734.0" prefWidth="588.0" style="-fx-border-width: 5; -fx-border-color: #9c01a4;">
+         <children>
+            <VBox layoutX="24.0" layoutY="86.0" prefHeight="610.0" prefWidth="537.0" spacing="40.0">
+               <children>
+                  <JFXTextField fx:id="txtEId" labelFloat="true" onAction="#EmployeeIdOnAction" prefHeight="54.0" prefWidth="503.0" promptText="Employee Id" />
+                  <JFXTextField fx:id="txtEName" labelFloat="true" prefHeight="54.0" prefWidth="503.0" promptText="Employee Name" />
+                  <JFXTextField fx:id="txtEAddress" labelFloat="true" prefHeight="54.0" prefWidth="503.0" promptText="Employee Address" />
+                  <JFXTextField fx:id="txtEStatus" labelFloat="true" prefHeight="54.0" prefWidth="503.0" promptText="Employee Status" />
+                  <JFXTextField fx:id="txtEMail" labelFloat="true" prefHeight="54.0" prefWidth="503.0" promptText="Employee E-mail" />
+                  <JFXTextField fx:id="txtEContact" labelFloat="true" prefHeight="54.0" prefWidth="503.0" promptText="Employee Contact" />
+                  <JFXTextField fx:id="txtESalary" labelFloat="true" prefHeight="54.0" prefWidth="503.0" promptText="Employee Salary" />
+                  <HBox alignment="CENTER" prefHeight="115.0" prefWidth="529.0" spacing="30.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#clearEmployeeOnAction" prefHeight="52.0" prefWidth="265.0" style="-fx-background-color: #ee0000; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text="   Clear" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="24" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#saveEmployeeOnAction" prefHeight="52.0" prefWidth="244.0" style="-fx-background-color: #0fb800; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text="   Save" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="23" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="160.0" layoutY="-28.0" prefHeight="57.0" prefWidth="258.0" style="-fx-background-color: #9c01a4;" text="Employees" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

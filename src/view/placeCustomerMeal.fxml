@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="placeMaelFID" prefHeight="772.0" prefWidth="1043.0" style="-fx-border-width: 4;" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlaceCustomerMealController">
+   <children>
+      <TableView fx:id="tblPlaceMeal" layoutX="48.0" layoutY="377.0" prefHeight="287.0" prefWidth="956.0" style="-fx-border-color: #b800a3; -fx-border-radius: 15 15 0 0; -fx-border-width: 2;" styleClass="tblCustomer">
+         <columns>
+            <TableColumn fx:id="colMId" minWidth="0.0" prefWidth="219.0" text="Meal Id" />
+            <TableColumn fx:id="colCharge" minWidth="0.0" prefWidth="251.0" text="Charge" />
+            <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="225.0" text="Qty" />
+            <TableColumn fx:id="colTotalCharge" minWidth="0.0" prefWidth="258.0" text="Total Charge" />
+         </columns>
+      </TableView>
+      <GridPane hgap="15.0" layoutX="43.0" layoutY="150.0" prefHeight="61.0" prefWidth="456.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ComboBox fx:id="cmbCId" prefHeight="37.0" prefWidth="233.0" promptText="Customer Id" style="-fx-border-width: 2; -fx-border-color: #68007f;" GridPane.rowIndex="1" />
+            <Label fx:id="roomId" alignment="CENTER" prefHeight="37.0" prefWidth="237.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Room Id" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <JFXButton buttonType="RAISED" layoutX="852.0" layoutY="310.0" onAction="#addToCartOnAction" prefHeight="43.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #00bf0f; -fx-border-color: #fff; fx-border-color: transparent; -fx-border-width: 2 2 2 2;" text=" Add To Cart" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" size="23" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="671.0" layoutY="310.0" onAction="#clearOnAction" prefHeight="43.0" prefWidth="150.0" ripplerFill="BLACK" style="-fx-background-color: #ff2929; -fx-border-color: #fff; fx-border-color: transparent; -fx-border-width: 2 2 2 2;" text="  Clear" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BITBUCKET" size="21" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="848.0" layoutY="692.0" onAction="#placeMealOnAction" prefHeight="43.0" prefWidth="157.0" ripplerFill="BLACK" style="-fx-background-color: #009a1c; -fx-border-color: #fff; fx-border-color: transparent; -fx-border-width: 2 2 2 2;" text=" Place Order" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="22" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="72.0" prefWidth="1043.0" style="-fx-background-color: #68007f;" text="Place Customer Meal" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="695.0" prefHeight="37.0" prefWidth="40.0" text="Rs :" textFill="#58006b">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="96.0" layoutY="695.0" prefHeight="37.0" prefWidth="175.0" text="0000.0" textFill="#58006b">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <GridPane hgap="15.0" layoutX="44.0" layoutY="235.0" prefHeight="35.0" prefWidth="956.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+         <children>
+            <ComboBox fx:id="cmbMealId" prefHeight="37.0" prefWidth="228.0" promptText="Meal Id" style="-fx-border-width: 2; -fx-border-color: #68007f;" />
+            <Label fx:id="lblQtyHand" alignment="CENTER" prefHeight="37.0" prefWidth="237.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Qty On Hand" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrice" alignment="CENTER" prefHeight="37.0" prefWidth="237.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Price" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtQty" alignment="CENTER" prefHeight="37.0" prefWidth="183.0" promptText="Qty For Customer" style="-fx-border-width: 2; -fx-border-color: #68007f;" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

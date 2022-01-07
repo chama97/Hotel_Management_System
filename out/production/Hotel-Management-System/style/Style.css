@@ -1,0 +1,25 @@
+.sidebarItem:hover{
+    -fx-background-color: #ad00d0;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.tblCustomer {
+    -fx-background-radius:14 14 0 0;
+
+}
+
+.tblCustomer .column-header-background{
+    -fx-background-color: #b800a3;
+    -fx-background-radius:14 14 0 0;
+}
+
+.tblCustomer .column-header, .table-view .filler{
+    -fx-size:45px;
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color:transparent;
+}
+
+.tblCustomer .column-header .label {
+    -fx-text-fill: white ;
+}

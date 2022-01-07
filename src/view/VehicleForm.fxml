@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="vehicleFID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1600.0" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="730.0" prefWidth="354.0" style="-fx-background-color: #4f005d;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#checkInOnAction" prefHeight="75.0" prefWidth="365.0" styleClass="sidebarItem" text="   Check-In" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_CHECK_ALT" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#checkOutOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Check-Out" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_TIMES_ALT" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#reservedOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Reserve Details" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST_ALT" size="25" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#CustomerOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Customers" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="24" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#RoomsOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Rooms" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BED" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#mealsOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="     Meals" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CUTLERY" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#vehicleOnAction" prefHeight="75.0" prefWidth="361.0" style="-fx-background-color: #a700c9;" styleClass="sidebarItem" text="   Vehicles" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TAXI" size="25" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#EmployeeOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Employee" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_MULTIPLE" size="30" />
+                     </graphic>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#reportOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Reports" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="26.0" prefHeight="72.0" prefWidth="1160.0" style="-fx-border-width: 3; -fx-border-color: #68007f; -fx-background-color: #68007f;" text="Vehicles" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblVehicle" layoutX="48.0" layoutY="241.0" prefHeight="348.0" prefWidth="1156.0" style="-fx-border-color: #b800a3; -fx-border-radius: 15 15 0 0; -fx-border-width: 2;" styleClass="tblCustomer">
+                     <columns>
+                        <TableColumn fx:id="colId" prefWidth="224.0" style="-fx-alignment: center;" text="Id" />
+                        <TableColumn fx:id="colType" minWidth="0.0" prefWidth="381.0" style="-fx-alignment: center;" text="Type" />
+                        <TableColumn fx:id="colCharge" minWidth="0.0" prefWidth="304.0" style="-fx-alignment: center;" text="Charge" />
+                        <TableColumn fx:id="colAvailable" minWidth="0.0" prefWidth="244.0" style="-fx-alignment: center;" text="Is Available" />
+                     </columns>
+                  </TableView>
+                  <JFXButton buttonType="RAISED" layoutX="201.0" layoutY="172.0" onAction="#UpdateVehicleOnAction" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: #553eff; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="359.0" layoutY="173.0" onAction="#deleteVehicleOnAction" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: #ee0000; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Delete" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="48.0" layoutY="172.0" onAction="#addVehicleOnAction" prefHeight="45.0" prefWidth="138.0" style="-fx-background-color: #0fb800; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <TextField fx:id="txtDelete" layoutX="509.0" layoutY="175.0" prefHeight="42.0" prefWidth="386.0" promptText="Enter Deleting Id" style="-fx-border-width: 2 2 2 2; -fx-border-color: #ee0000;">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <GridPane hgap="15.0" layoutX="48.0" layoutY="616.0" prefHeight="61.0" prefWidth="1165.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="cmbCId" prefHeight="38.0" prefWidth="238.0" promptText="Customer Id" style="-fx-border-width: 2; -fx-border-color: #68007f;" />
+                        <ComboBox fx:id="cmbVehicleId" prefHeight="38.0" prefWidth="242.0" promptText="Vehicle Id" style="-fx-border-width: 2; -fx-border-color: #68007f;" GridPane.columnIndex="1" />
+                        <Label fx:id="lblTotalCharge" alignment="CENTER" prefHeight="41.0" prefWidth="244.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Total Charge" textFill="#2d1486" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDays" alignment="CENTER" onAction="#totalChargeOnAction" prefHeight="38.0" prefWidth="183.0" promptText="Days" style="-fx-border-width: 2; -fx-border-color: #68007f;" GridPane.columnIndex="3" />
+                        <Label fx:id="lblVehicleCharge" alignment="CENTER" prefHeight="38.0" prefWidth="229.0" style="-fx-border-width: 2; -fx-border-color: #68007f;" text="Charge" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <JFXButton buttonType="RAISED" layoutX="1035.0" layoutY="710.0" onAction="#rentVehicleOnAction" prefHeight="46.0" prefWidth="178.0" style="-fx-background-color: #0fb800; -fx-border-width: 2 2 2 2; -fx-border-color: #fff;" text=" Rent Vehicle" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CAR" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <FontAwesomeIconView fill="#ff5353" glyphName="CLOSE" layoutX="1150.0" layoutY="80.0" onMouseClicked="#closeOnAction" size="45" text="">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fill="#0059ff" glyphName="REFRESH" layoutX="1143.0" layoutY="218.0" onMouseClicked="#refreshTableOnAction" size="40" text="">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

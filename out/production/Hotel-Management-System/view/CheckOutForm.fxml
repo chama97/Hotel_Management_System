@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="checkOutFID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1600.0" stylesheets="@../style/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CheckOutFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="730.0" prefWidth="354.0" style="-fx-background-color: #4f005d;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#checkInOnAction" prefHeight="75.0" prefWidth="365.0" styleClass="sidebarItem" text="   Check-In" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_CHECK_ALT" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#checkOutOnAction" prefHeight="75.0" prefWidth="361.0" style="-fx-background-color: #a700c9;" styleClass="sidebarItem" text="   Check-Out" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_TIMES_ALT" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#reservedOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Reserve Details" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST_ALT" size="25" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#CustomerOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Customers" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="24" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#RoomsOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Rooms" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BED" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#mealsOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="     Meals" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CUTLERY" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#vehicleOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Vehicles" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TAXI" size="25" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#EmployeeOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Employee" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_MULTIPLE" size="30" />
+                     </graphic>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" onAction="#reportOnAction" prefHeight="75.0" prefWidth="361.0" styleClass="sidebarItem" text="   Reports" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="26" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets left="25.0" top="10.0" />
+                     </padding>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="26.0" prefHeight="72.0" prefWidth="1158.0" style="-fx-border-width: 3; -fx-border-color: #68007f; -fx-background-color: #68007f;" text="Check-Out" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="49.0" layoutY="221.0" prefHeight="471.0" prefWidth="1150.0" style="-fx-border-width: 4; -fx-border-color: #68007f;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="182.0" prefWidth="671.0">
+                           <children>
+                              <Label text="Customer Id">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" top="90.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="txtOutCId" alignment="CENTER" prefHeight="52.0" prefWidth="440.0" promptText="Enter Customer Id" style="-fx-border-color: #2000b1; -fx-border-width: 2;">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" top="85.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="182.0" prefWidth="671.0">
+                           <children>
+                              <JFXButton onAction="#clearOnAction" prefHeight="54.0" prefWidth="275.0" style="-fx-background-color: #757575;" text="Clear" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="60.0" top="40.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#checkOutCIdOnAction" prefHeight="54.0" prefWidth="286.0" style="-fx-background-color: #e40000;" text="Check-Out" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="40.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <FontAwesomeIconView fill="#ff5353" glyphName="CLOSE" layoutX="1151.0" layoutY="77.0" onMouseClicked="#closeOnAction" size="45">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
